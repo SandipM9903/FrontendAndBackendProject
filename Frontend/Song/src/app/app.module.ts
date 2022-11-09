@@ -7,11 +7,15 @@ import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SongComponent } from './song/song.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SongComponent
+    SongComponent,
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

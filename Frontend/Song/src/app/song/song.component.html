@@ -1,0 +1,18 @@
+
+<h1>Song Form</h1>
+<form [formGroup]="songForm" (ngSubmit)="saveData()">
+    <div>
+        SONG ID : <input type="text" formControlName="songId"/>
+        SONG NAME : <input type="text" formControlName="songName"/>
+        SINGER NAME : <input type="text" formControlName="singerName"/>
+        TYPE : <input type="text" formControlName="songType"/>
+    </div>
+    <input type="submit" value="{{editMode ? 'Update' : 'Save'}}">
+</form>
+
+
+<hr>
+<div *ngFor="let s of songData">
+    {{s | json}} <button (click)="editSong(s.songId, s.songName, s.singerName, s.songType)">Edit</button> <button (click)="deleteSong(s.songId)">Delete</button>
+</div>
+<hr>
